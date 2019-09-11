@@ -159,6 +159,22 @@ export const constantRoutes = [
     ]
   },
 
+  // 菜单管理
+  {
+    path: '/sys/menu',
+    alwaysShow: true,
+    component: Layout,
+    redirect: '/sys/menu',
+    name: 'menu',
+    meta: {
+      title: '菜单管理',
+      icon: 'nested'
+    },
+    children: [
+      { path: '', component: ()=>import('@/views/sys/menu'), name: '菜单', meta: { title: '菜单列表', icon: 'nested',affix: true}},
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

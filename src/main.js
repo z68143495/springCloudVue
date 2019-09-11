@@ -11,6 +11,7 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import store from './store'
 import router from './router'
+import global from './api/global.js'
 
 import '@/icons' // icon
 import '@/permission' // permission control
@@ -32,6 +33,8 @@ if (process.env.NODE_ENV === 'production') {
 Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
+
+Vue.prototype.GLOBAL = global
 
 new Vue({
   el: '#app',
